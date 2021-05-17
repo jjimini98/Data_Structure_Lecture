@@ -8,11 +8,44 @@
 #         if x == l: return L.index(l)
 
 
- 
-def solution(L, x):
-   mid = ()
+# 효율성 테스트 실패  
+# def solution(L, x):
+#    mid_index = int(len(L)/2)
+#    mid = L[mid_index]
 
-L = [2, 3, 5, 6, 9, 11, 15]
-x = 6
+#    if x not in L: return -1 
+
+#    if x > mid :
+#       for l in L[mid_index+1:]:
+#         if l == x : return L.index(l)
+   
+#    elif x < mid  :    
+#       for l in L[0:mid_index]:
+#          if l == x : return L.index(l)
+
+#    elif x == mid : return mid_index
+
+
+# L = [2, 5, 7, 9, 11]
+# x = 22
+
+# print(solution(L,x))
+
+def solution(L, x):
+   mid = L[int(len(L)/2)]
+
+   if x not in L: return -1 
+
+   if x > mid :
+      if x in L[L.index(mid)+1:]: return L.index(x)
+
+   elif x < mid  :    
+      if x in L[0:L.index(mid)]: return L.index(x)
+
+   elif x == mid : return L.index(x)
+
+
+L = [2, 5, 7, 9, 11]
+x = 2
 
 print(solution(L,x))
