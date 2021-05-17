@@ -32,7 +32,7 @@
 # print(solution(L,x))
 
 def solution(L, x):
-   mid = L[int(len(L)/2)]
+   mid = len(L)//2
 
    if x not in L: return -1 
 
