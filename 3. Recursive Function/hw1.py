@@ -6,8 +6,3 @@ def solution(x):
       return (solution(x-2) + solution(x-1))
 
 
-print(solution(6))
-print(solution(1))
-print(solution(3))
-
-
